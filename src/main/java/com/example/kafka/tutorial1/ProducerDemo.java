@@ -23,10 +23,10 @@ public class ProducerDemo {
         //create producer
         KafkaProducer<String, String> producer = new KafkaProducer<String, String>(properties);
         //writing 10 messages to topic
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 30; i++) {
             //create producer record
             ProducerRecord<String, String> record =
-                    new ProducerRecord<>("first_topic", "message " +i);
+                    new ProducerRecord<>("first_topic", Integer.toString(i%3),"messages " + i);
             //sends data asynchronous
             producer.send(record, (recordMetadata, e) -> {
                 //executes on every success execution or throw an Error
