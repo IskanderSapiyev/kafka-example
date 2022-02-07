@@ -1,7 +1,6 @@
-package com.example.kafka.tutorial1;
+package com.example.kafka.simple.consumerProducer;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -12,14 +11,14 @@ import java.time.Duration;
 import java.util.Collections;
 import java.util.Properties;
 
-public class ConsumerDemoGroup {
+public class ConsumerDemo {
     final static String bootstrapServers = "127.0.0.1:9092";
     final static String groupId = "my-fourh-group";
     final static String topic = "first_topic";
 
 
     public static void main(String[] args) {
-        Logger logger = LoggerFactory.getLogger(ConsumerDemoGroup.class.getName());
+        Logger logger = LoggerFactory.getLogger(ConsumerDemo.class.getName());
 
         Properties properties = new Properties();
         //create consumer config
@@ -48,4 +47,3 @@ public class ConsumerDemoGroup {
 
     }
 }
-

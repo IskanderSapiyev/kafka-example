@@ -1,6 +1,5 @@
-package com.example.kafka.tutorial1;
+package com.example.kafka.simple.consumerProducer;
 
-import com.sun.jdi.Bootstrap;
 import org.apache.kafka.clients.producer.*;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.slf4j.Logger;
